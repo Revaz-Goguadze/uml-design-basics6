@@ -1,15 +1,15 @@
 # UML Design Basics
 
-A beginner level task for practicing creating and designing classes using UML diagrams for describing class structure and behavior.  
+A beginner level task for practicing creating and designing classes using UML diagrams for describing class structure and behavior.
 
-Before starting with the task learn the basics of [UML language](https://en.wikipedia.org/wiki/Unified_Modeling_Language) and [UML Class Diagrams](https://en.wikipedia.org/wiki/Class_diagram). Search YouTube for [relevant video tutorials](https://www.youtube.com/results?search_query=uml+class+diagram) to get started quickly. Don't waste time! You don't have to master the UML Class Diagrams. You just need to get a [basic understanding on the topic](https://www.tutorialspoint.com/object_oriented_analysis_design/ooad_uml_basic_notation.htm), and you can always find the answer to your question in the [UML Class Diagrams Reference](https://www.uml-diagrams.org/class-reference.html). 
+Before starting with the task learn the basics of [UML language](https://en.wikipedia.org/wiki/Unified_Modeling_Language) and [UML Class Diagrams](https://en.wikipedia.org/wiki/Class_diagram). Search YouTube for [relevant video tutorials](https://www.youtube.com/results?search_query=uml+class+diagram) to get started quickly. Don't waste time! You don't have to master the UML Class Diagrams. You just need to get a [basic understanding on the topic](https://www.tutorialspoint.com/object_oriented_analysis_design/ooad_uml_basic_notation.htm), and you can always find the answer to your question in the [UML Class Diagrams Reference](https://www.uml-diagrams.org/class-reference.html).
 
-Estimated time to complete the task: 6h.
+Estimated time to complete the task: 4h.
 
 
 ## Task
 
-The task has twenty four sections with small sub-tasks. After completing a section, read materials in "Additional Reading" section and answer the questions in "Step Questions" section. 
+The task has twenty four sections with small sub-tasks. After completing a section, read materials in "Additional Reading" section and answer the questions in "Step Questions" section.
 
 
 ### Visual Studio
@@ -31,7 +31,7 @@ public static class SimpleStaticClass1
 }
 ```
 
-Class diagram 1. The `SimpleStaticClass1` static class. 
+Class diagram 1. The `SimpleStaticClass1` static class.
 
 ![Class Diagram for SimpleStaticClass1](./images/simple-static-class1.png).
 
@@ -85,7 +85,7 @@ If C# compiler will report the SA1202 StyleCop warning during the project compil
 
 The [SimpleStaticClass2.cs](UmlDesignBasics/SimpleStaticClass2.cs) file contains a bunch of [pragma preprocessor directives](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives) at the beginning to suppress issue reporting by the code analysis tools.
 
-* Code analysis tools treat non-constant public or protected fields as a suspicious code. Read the [SA1401](https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1401.md) and [CA2211](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2211) documentation pages to get more details why having private fields is important for code maintainability. 
+* Code analysis tools treat non-constant public or protected fields as a suspicious code. Read the [SA1401](https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1401.md) and [CA2211](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2211) documentation pages to get more details why having private fields is important for code maintainability.
 
 ```cs
 #pragma warning disable SA1401  // Fields should be private
@@ -134,7 +134,7 @@ Open the [SimpleStaticClass3.cs](UmlDesignBasics/SimpleStaticClass3.cs) file, ad
 | GetString      | string      | "abc"        | public                | +                   |
 | GetObject      | object      | null         | private               | -                   |
 
-A method should return a literal as a return value. 
+A method should return a literal as a return value.
 
 Example 3. Static method declaration.
 
@@ -184,7 +184,7 @@ public static long GetLongInteger()
 
 ### 4. Static Fields Initialization
 
-Analyze the class diagram below and add the `SimpleStaticClass4` static class code to the [SimpleStaticClass4.cs](UmlDesignBasics/SimpleStaticClass4.cs) file. 
+Analyze the class diagram below and add the `SimpleStaticClass4` static class code to the [SimpleStaticClass4.cs](UmlDesignBasics/SimpleStaticClass4.cs) file.
 
 Class diagram 4. The `SimpleStaticClass4` static class.
 
@@ -209,7 +209,7 @@ Example 4.1. The field initializer usage.
 private static int intField = 212;
 ```
 
-Implement the static methods to return the relevant values of the private static fields. 
+Implement the static methods to return the relevant values of the private static fields.
 
 Example 4.2. Accessing a static field in a static method using a class name.
 
@@ -232,7 +232,7 @@ public static int GetInteger()
     return intField;
 }
 ```
-Both in 4.2 and 4.3 examples are equivalent. 
+Both in 4.2 and 4.3 examples are equivalent.
 
 You can use the "Simplify member access" refactoring technique in the Visual Studio to optimize the code of the static methods in the `SimpleStaticClass4` class.
 
@@ -303,11 +303,11 @@ Class diagram 6. The `SimpleClass2` class.
 
 Class diagram explanation:
 * Class attributes in the diagram are not underlined - the class fields should not have the `static` modifier.
-* The `+` and `-` signs before an attribute name define the `public` and `private` visibility types. 
+* The `+` and `-` signs before an attribute name define the `public` and `private` visibility types.
 
 #### Additional Reading
 
-Read [Objects and Classes](https://www.tutorialspoint.com/object_oriented_analysis_design/ooad_object_oriented_model.htm) to understand the state and the behavior concepts:  
+Read [Objects and Classes](https://www.tutorialspoint.com/object_oriented_analysis_design/ooad_object_oriented_model.htm) to understand the state and the behavior concepts:
 
 > State that determines the characteristic properties of an object as well as the values of the properties that the object holds.
 
@@ -315,7 +315,7 @@ Read [Objects and Classes](https://www.tutorialspoint.com/object_oriented_analys
 
 The state of an object of the `SimpleClass2` class is a set of the `SimpleClass2` fields and the values of these fields.
 
-A class with fields only is a simple [data structure](https://en.wikipedia.org/wiki/Data_structure). 
+A class with fields only is a simple [data structure](https://en.wikipedia.org/wiki/Data_structure).
 
 #### Step Questions
 
@@ -429,7 +429,7 @@ int i = obj.GetInteger(); // ?
 
 Open [SimpleClass4](UmlDesignBasics/SimpleClass4.cs) class. The class has public instance fields already, but having public instance fields in your classes may lead to runtime issues. That's why code analysis tools report the _SA1401_ and _CA1051_ warnings for the `SimpleClass4` class.
 
-Refactor the code using [Encapsulate Field](https://refactoring.guru/encapsulate-field) (use Java code snippet as an example) technique to hide all instance fields. 
+Refactor the code using [Encapsulate Field](https://refactoring.guru/encapsulate-field) (use Java code snippet as an example) technique to hide all instance fields.
 
 Class diagram 9. The `SimpleClass4` class after refactoring.
 
@@ -513,7 +513,7 @@ An object of the `SimpleClass5` class is [immutable](https://www.c-sharpcorner.c
 ### Step Questions
 
 * How to initialize a class field using a field initializers when a class is instantiated?
-* Whether the SimpleClass5 class is immutable or mutable class? Why? 
+* Whether the SimpleClass5 class is immutable or mutable class? Why?
 
 
 ### 11. Parameterless Constructor
@@ -782,7 +782,7 @@ class MyClass {
 
 ### 16. Encapsulation
 
-_Encapsulation_ concept doesn't have a strict definition. The meaning of the concept may be different in various sources. 
+_Encapsulation_ concept doesn't have a strict definition. The meaning of the concept may be different in various sources.
 
 [Object oriented programming](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/) article:
 
@@ -824,14 +824,14 @@ Add eight public constructors with one parameter (see the class diagram above), 
 | StringValue   | "jklmno"                  |
 | ObjectValue   | null                      |
 
-A relevant instance property should be initialized with a constructor parameter value. 
+A relevant instance property should be initialized with a constructor parameter value.
 
 Example 17.1. The declaration of the public constructor with `int` parameter.
 
 ```cs
 public SimpleClass11(int intValue)
 {
-    this.IntValue = intValue; // initialize IntValue property with constructor parameter value 
+    this.IntValue = intValue; // initialize IntValue property with constructor parameter value
     this.LongValue = -8124; // initialize other properties with default values
     this.FloatValue = -889.542F;
     this.DoubleValue = 89238.0809;
@@ -966,11 +966,11 @@ Chain the public constructors in a way to invoke the constructor with "n + 1" pa
 | StringValue  | "ghimnojkl"                |
 | ObjectValue  | null                       |
 
-Example 19.1. The chain of public constructors. 
+Example 19.1. The chain of public constructors.
 
 ```cs
 public SimpleClass13()
-    : this(1087) // invoke the SimpleClass13(int) constructor 
+    : this(1087) // invoke the SimpleClass13(int) constructor
 {
 }
 
@@ -1006,7 +1006,7 @@ Class diagram 20. The `SimpleClass14` class.
 
 ![Class Diagram for SimpleClass14](./images/simple-class14.png).
 
-Analyze the class diagram above and [replace constructors with static factory methods](https://refactoring.guru/replace-constructor-with-factory-method). The `Create` static methods should instantiate the `SimpleClass14` class using the default parameters from the table below: 
+Analyze the class diagram above and [replace constructors with static factory methods](https://refactoring.guru/replace-constructor-with-factory-method). The `Create` static methods should instantiate the `SimpleClass14` class using the default parameters from the table below:
 
 | Property     | Default Value              |
 |--------------|----------------------------|
@@ -1062,13 +1062,13 @@ public static SimpleClass14 Create(int intValue, long longValue, float floatValu
 
 #### Additional Reading
 
-Creating objects with static factory methods might have advantages over using class constructors. Read there articles to get more details: 
+Creating objects with static factory methods might have advantages over using class constructors. Read there articles to get more details:
 
 * [Static Factory Methods vs Constructors In C#](https://www.gustavwengel.dk/csharp-static-factory-vs-constructor)
 * [Constructors vs Static factory methods](https://blog.knoldus.com/constructors-vs-static-factory-methods)
 * [Static factory method vs public constructor](https://stackoverflow.com/questions/22223313/static-factory-method-vs-public-constructor) discussion thread on StackOverflow
 
-An [Activator class](https://docs.microsoft.com/en-us/dotnet/api/system.activator) has multiple [CreateInstance methods](https://docs.microsoft.com/en-us/dotnet/api/system.activator.createinstance) that in fact are static factory methods: 
+An [Activator class](https://docs.microsoft.com/en-us/dotnet/api/system.activator) has multiple [CreateInstance methods](https://docs.microsoft.com/en-us/dotnet/api/system.activator.createinstance) that in fact are static factory methods:
 
 ```cs
 public static object? CreateInstance(Type type)
@@ -1107,7 +1107,7 @@ Copy the `Create(int, long, float, double, char, bool, string, object)` method f
 | stringValue      | "pqrmno"                   |
 | objectValue      | null                       |
 
-Example 21.1. Declaring an optional parameter with a constant expression as a default value. 
+Example 21.1. Declaring an optional parameter with a constant expression as a default value.
 
 ```cs
 public static SimpleClass15 Create(
@@ -1121,7 +1121,7 @@ public static SimpleClass15 Create(
 
 Implement methods in the [CreatingSimpleClass15](UmlDesignBasics/CreatingSimpleClass15.cs) class by invoking the `Create` method to create an object of the `SimpleClass15` class.
 
-Example 21.2. The `CreateSimpleClass15WithDefaultValues` method implementation. 
+Example 21.2. The `CreateSimpleClass15WithDefaultValues` method implementation.
 
 ```cs
 public static object CreateSimpleClass15WithDefaultValues()
@@ -1130,9 +1130,9 @@ public static object CreateSimpleClass15WithDefaultValues()
 }
 ```
 
-Use [named arguments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#named-arguments) to pass arguments to the `SimpleClass15.Create` method.  
+Use [named arguments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#named-arguments) to pass arguments to the `SimpleClass15.Create` method.
 
-Example 21.3. Named arguments. 
+Example 21.3. Named arguments.
 
 ```cs
 public static object CreateSimpleClass15(double doubleValue)
@@ -1199,7 +1199,7 @@ NB: "&lt;&lt;const&gt;&gt;" is a custom UML stereotype, not a standard UML notat
 
 #### Additional Reading
 
-Read more about constants in [Constants (C# Programming Guide)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constants) article: 
+Read more about constants in [Constants (C# Programming Guide)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constants) article:
 
 > Constants are immutable values which are known at compile time and do not change for the life of the program. Only the C# built-in types (excluding System.Object) may be declared as const. User-defined types, including classes, structs, and arrays, cannot be const. Use the readonly modifier to create a class, struct, or array that is initialized one time at runtime (for example in a constructor) and thereafter cannot be changed.
 
@@ -1313,7 +1313,7 @@ public static readonly object IntType;
 // TODO: add other fields here
 ```
 
-Add a [static constructor](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-constructors) and initialize static fields with values from the table below: 
+Add a [static constructor](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-constructors) and initialize static fields with values from the table below:
 
 | Field Name   | Value          |
 |--------------|----------------|
