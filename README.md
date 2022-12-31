@@ -1094,7 +1094,7 @@ Class diagram 21. The `SimpleClass15` class.
 
 ![Class Diagram for SimpleClass15](./images/simple-class15.png).
 
-Copy `Create(int, long, float, double, char, bool, string, object)` method from the `SimpleClass14` class to `SimpleClass15` class, and make the [method parameters optional](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#optional-arguments) by adding a default value.
+Copy the `Create(int, long, float, double, char, bool, string, object)` method from the `SimpleClass14` class to `SimpleClass15` class, and make the [method parameters optional](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#optional-arguments) by adding a default value to each method parameter.
 
 | Method Parameter | Default Value              |
 |------------------|----------------------------|
@@ -1107,7 +1107,7 @@ Copy `Create(int, long, float, double, char, bool, string, object)` method from 
 | stringValue      | "pqrmno"                   |
 | objectValue      | null                       |
 
-Example 21.1. Optional parameter with a constant expression as a default value. 
+Example 21.1. Declaring an optional parameter with a constant expression as a default value. 
 
 ```cs
 public static SimpleClass15 Create(
@@ -1119,7 +1119,7 @@ public static SimpleClass15 Create(
 }
 ```
 
-Implement methods in the [CreatingSimpleClass15](UmlDesignBasics/CreatingSimpleClass15.cs) class by invoking the `SimpleClass15.Create` method to create an object of the `SimpleClass15` class.
+Implement methods in the [CreatingSimpleClass15](UmlDesignBasics/CreatingSimpleClass15.cs) class by invoking the `Create` method to create an object of the `SimpleClass15` class.
 
 Example 21.2. The `CreateSimpleClass15WithDefaultValues` method implementation. 
 
@@ -1227,9 +1227,9 @@ Create the new `SimpleClass16` class in the [SimpleClass16.cs](UmlDesignBasics/S
 | DefaultStringValue  | "stuvwx"       |
 | DefaultObjectValue  | null           |
 
-Add private instance fields with ["readonly" modifier](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly).
+Add private instance fields with [`readonly` modifier](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly).
 
-Example 23.1. Private readonly instance field.
+Example 23.1. The declaration of an instance field with the `readonly` modifier.
 
 ```cs
 private readonly int intField;
@@ -1238,7 +1238,7 @@ private readonly int intField;
 
 Add a constructor with parameters, use the parameters to initialize instance fields, and make the [constructor parameters optional](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#optional-arguments) by setting the constants as default values.
 
-Example 23.2. Constant as default value for an optional parameter.
+Example 23.2. Using a constant as default value for an optional constructor parameter.
 
 ```cs
 public SimpleClass16(
@@ -1252,7 +1252,7 @@ public SimpleClass16(
 
 Add public properties with "get" accessors only that should return the instance field values.
 
-rExample 23.3. The declaration of a public property with "get" accessor.
+Example 23.3. The declaration of a public property with "get" accessor.
 
 ```cs
 public int IntValue { get => this.intField; }
@@ -1306,7 +1306,7 @@ Class diagram 23. The `SimpleStaticClass6` class.
 
 ![Class Diagram for SimpleStaticClass6](./images/simple-static-class6.png).
 
-Example 24.1. Public static read-only field.
+Example 24.1. The declaration of a static field with the `readonly` modifier.
 
 ```cs
 public static readonly object IntType;
@@ -1325,7 +1325,7 @@ Add a [static constructor](https://docs.microsoft.com/en-us/dotnet/csharp/progra
 | BooleanType  | typeof(bool)   |
 | StringType   | typeof(string) |
 
-Example 24.2. Static constructor
+Example 24.2. The declaration of a static constructor.
 
 ```cs
 static SimpleStaticClass6()
