@@ -1,4 +1,4 @@
-#pragma warning disable IDE0017 // Object initialization can be simplified
+﻿using System;
 
 // ReSharper disable InconsistentNaming
 // ReSharper disable UseObjectOrCollectionInitializer
@@ -8,14 +8,23 @@ namespace UmlDesignBasics
     {
         public static object CreateSimpleClass2()
         {
-            // TODO: Implement this method.
-            throw new NotImplementedException();
+            SimpleClass2 simpleClass = new SimpleClass2();
+            simpleClass.IntField = -331;
+            simpleClass.FloatField = 13.13f;
+            simpleClass.DoubleField = -31.31;
+            simpleClass.BooleanField = true;
+            return simpleClass;
         }
 
         public static object CreateSimpleClass2ObjectInitializer()
         {
-            // TODO: Implement this method.
-            throw new NotImplementedException();
+            return new SimpleClass2
+            {
+                IntField = 432,
+                FloatField = -42.31f,
+                DoubleField = 43.12,
+                BooleanField = false,
+            };
         }
     }
 }

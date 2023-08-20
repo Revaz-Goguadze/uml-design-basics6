@@ -1,5 +1,6 @@
-[assembly: CLSCompliant(true)]
-
-namespace UmlDesignBasics
+﻿namespace UmlDesignBasics
 {
+    public class SimpleClass1
+    {
+    }
 }
