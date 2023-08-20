@@ -1,5 +1,7 @@
 ﻿// ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable UnusedAutoPropertyAccessor.Global
+
+#nullable enable
 namespace UmlDesignBasics
 {
     public class SimpleClass12

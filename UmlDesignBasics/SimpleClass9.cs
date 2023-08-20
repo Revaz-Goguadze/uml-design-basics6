@@ -1,4 +1,5 @@
-﻿namespace UmlDesignBasics
+﻿#nullable enable
+namespace UmlDesignBasics
 {
     public class SimpleClass9
     {

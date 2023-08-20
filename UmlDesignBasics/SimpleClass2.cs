@@ -1,4 +1,6 @@
 ﻿// ReSharper disable InconsistentNaming
+
+#nullable enable
 #pragma warning disable SA1401 // Fields should be private
 #pragma warning disable CA1051 // Do not declare visible instance fields
 #pragma warning disable CA1823 // Unused field

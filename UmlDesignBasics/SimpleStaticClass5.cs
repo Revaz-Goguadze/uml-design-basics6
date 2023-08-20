@@ -11,7 +11,7 @@ namespace UmlDesignBasics
         public const int BitsInByte = (2 * 2) + (16 / 4);
         public const float Tau = 3.1415925f * 2;
         public const char NewLine = '\n';
-        public const bool BoolValue = true && false && false;
+        public const bool BoolValue = false && false;
         public const string HelloWorld = "Hello" + ", " + "world" + "!";
     }
 }

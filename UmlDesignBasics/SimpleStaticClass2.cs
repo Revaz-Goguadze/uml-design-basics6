@@ -1,5 +1,7 @@
 ﻿// ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
+
+#nullable enable
 #pragma warning disable SA1401 // Fields should be private
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CA1823 // Unused field
